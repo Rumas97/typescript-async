@@ -69,6 +69,9 @@ async function render() {
   renderHeroes();
 }
 
+
+//callback function
+
 function refreshPageCallback() {
   getHeroTreeCallback(
     searchEmailElement.value,
@@ -85,6 +88,8 @@ function refreshPageCallback() {
   );
 }
 
+//using Promises
+
 function refreshPagePromise() {
   getHeroTreePromise(searchEmailElement.value)
     .then((hero: Hero) => replaceHeroListComponent(hero))
@@ -94,6 +99,9 @@ function refreshPagePromise() {
       replaceHeroListComponent();
     });
 }
+
+
+//using Async await
 
 async function refreshPageAsync() {
   let hero: Hero;
